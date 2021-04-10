@@ -1,8 +1,8 @@
 const canvas = document.getElementById("canvas1")
 const ctx = canvas.getContext('2d')
 
-canvas.width = 600px;
-canvas.height = 400px;
+canvas.width = 600;
+canvas.height = 400;
 
 let spacePressed = false;
 let angle = 0;
@@ -16,3 +16,9 @@ function animate() {
     ctx.fillRect(10, 10, 50, 50);
     requestAnimationFrame(animate);
 }
+
+animate();
+
+window.addEventListener('keydown', function(e) {
+    console.log(e.code);
+})
